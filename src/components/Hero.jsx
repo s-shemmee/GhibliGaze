@@ -117,11 +117,11 @@ export default function Hero() {
 
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className="max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
-            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl text-white font-extrabold mb-5">
+            <h1 className="font-oregano text-7xl md:text-8xl lg:text-9xl text-white font-extrabold mb-5">
               Gaze On<strong className="block font-extrabold text-[#618548]">GhibliGaze</strong>
             </h1>
 
-            <p className="text-white text-lg max-w-lg mx-auto">
+            <p className="text-white text-lg max-w-lg">
               Embark on a captivating journey with GhibliGaze, where Studio Ghibli's enchanting world comes to life.
               <br></br>
               Join us in exploring breathtaking landscapes and spellbinding characters, each frame telling a unique and magical tale.

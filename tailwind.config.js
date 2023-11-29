@@ -6,8 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Assistant', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-        display: ['Oregano', 'cursive'],
+        oregano: ['Oregano', 'cursive'],
       },
     },
   },
