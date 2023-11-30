@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="py-10 lg:py-20 bg-stone-100 dark:bg-gray-800" id="about-section">
+    <section className="py-10 lg:py-10 bg-stone-100 dark:bg-gray-800" id="about-section">
       <div className="max-w-screen-xl py-4 mx-auto lg:py-6 md:px-6">
         {/* Two-column layout with flex */}
         <div className="flex flex-wrap">

@@ -2,6 +2,8 @@ import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Trailers from './components/Trailers';
+import Gallery from './components/Gallery';
+import News from './components/News';
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Hero />
       <About />
       <Trailers />
+      <Gallery />
+      <News />
     </div>
   )
 }
