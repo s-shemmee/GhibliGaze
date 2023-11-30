@@ -49,7 +49,7 @@ export default function Hero() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-white transition duration-300 hover:text-[#71915a] focus:text-[#71915a] focus:outline-none relative group"
+                className="text-sm font-semibold leading-6 text-white transition duration-300 hover:text-[#618548] focus:text-[#618548] focus:outline-none relative group"
               >
                 {item.name}
               </a>
@@ -119,19 +119,17 @@ export default function Hero() {
             <h1 className="font-oregano text-7xl md:text-8xl lg:text-9xl text-white font-extrabold mb-5">
               Gaze On<strong className="block font-extrabold text-[#618548]">GhibliGaze</strong>
             </h1>
-
-            <p className="text-white text-lg max-w-lg">
-              Embark on a captivating journey with GhibliGaze, where Studio Ghibli's enchanting world comes to life.
-              <br></br>
-              Join us in exploring breathtaking landscapes and spellbinding characters, each frame telling a unique and magical tale.
+            <p className="text-stone-100 text-lg max-w-lg">
+              Celebrate the magic of Studio Ghibli with GhibliGaze – a mesmerizing adventure awaits. Immerse yourself in enchanting landscapes and captivating characters, as each frame unfolds a spellbinding tale.
+              <br/>
+              Join us in the enchantment of GhibliGaze and experience the extraordinary world of Studio Ghibli like never before.
             </p>
-
             <div className="mt-8 flex flex-wrap gap-4 text-center">
-              <a href="#" className="block w-full rounded bg-[#618548] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#4e6a3a] focus:outline-none focus:ring active:bg-[#577841] sm:w-auto">
+              <a href="#" className="block w-full rounded-3xl bg-[#618548] px-12 py-3 text-sm font-medium text-stone-100 shadow hover:bg-[#4e6a3a] focus:outline-none focus:ring active:bg-[#577841] sm:w-auto">
                 Explore Now
               </a>
-              <a href="#" className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#618548] shadow hover:text-[#4e6a3a] focus:outline-none focus:ring active:text-[#577841] sm:w-auto">
-                Get Ready for Magic
+              <a href="#" className="block w-full rounded-3xl bg-stone-100 px-12 py-3 text-sm font-medium text-[#618548] shadow hover:bg-white focus:outline-none focus:ring active:bg-gray-100 sm:w-auto">
+                Watch Trailer
               </a>
             </div>
           </div>
