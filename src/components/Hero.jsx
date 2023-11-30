@@ -14,7 +14,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <section className="bg-stone-100 dark:bg-gray-800" id="hero-section">
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
         {/* Navigation */}
@@ -60,7 +60,7 @@ export default function Hero() {
         {/* Mobile Menu */}
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
         <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-stone-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">GhibliGaze</span>
@@ -97,9 +97,8 @@ export default function Hero() {
             </Dialog.Panel>
           </Dialog>
       </header>
-
+      
       {/* Content */}
-
       <main className="relative">
         {/* Video Background */}
         <video
@@ -113,10 +112,10 @@ export default function Hero() {
         </video>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-trasparent to-transparent opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-100"></div>
 
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-          <div className="max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
+          <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
             <h1 className="font-oregano text-7xl md:text-8xl lg:text-9xl text-white font-extrabold mb-5">
               Gaze On<strong className="block font-extrabold text-[#618548]">GhibliGaze</strong>
             </h1>
@@ -138,6 +137,6 @@ export default function Hero() {
           </div>
         </div>
       </main>
-    </div>
+    </section>
   );
 }
