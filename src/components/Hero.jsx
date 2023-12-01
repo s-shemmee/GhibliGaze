@@ -7,6 +7,7 @@ const navigation = [
   { name: 'About', href: '#' },
   { name: 'Films', href: '#' },
   { name: 'Trailers', href: '#' },
+  { name: 'Gallery', href: '#'},
   { name: 'News', href: '#' },
 ];
 
@@ -121,16 +122,17 @@ export default function Hero() {
             </h1>
             <p className="text-stone-100 text-lg max-w-lg">
               Celebrate the magic of Studio Ghibli with GhibliGaze – a mesmerizing adventure awaits. Immerse yourself in enchanting landscapes and captivating characters, as each frame unfolds a spellbinding tale.
-              <br/>
+            </p>
+            <p className="text-stone-100 text-lg max-w-lg mt-5">
               Join us in the enchantment of GhibliGaze and experience the extraordinary world of Studio Ghibli like never before.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-center">
               <a href="#" className="block w-full rounded-3xl bg-[#618548] px-12 py-3 text-sm font-medium text-stone-100 shadow hover:bg-[#4e6a3a] focus:outline-none focus:ring active:bg-[#577841] sm:w-auto">
                 Explore Now
               </a>
-              <a href="#" className="block w-full rounded-3xl bg-stone-100 px-12 py-3 text-sm font-medium text-[#618548] shadow hover:bg-white focus:outline-none focus:ring active:bg-gray-100 sm:w-auto">
-                Watch Trailer
-              </a>
+              <p className="mt-3 text-stone-100 text-sm">
+                Get Ready for Magic ⤾
+              </p>
             </div>
           </div>
         </div>
