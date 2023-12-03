@@ -4,6 +4,8 @@ import About from './components/About';
 import Trailers from './components/Trailers';
 import Gallery from './components/Gallery';
 import News from './components/News';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Trailers />
       <Gallery />
       <News />
+      <Newsletter />
+      <Footer />
     </div>
   )
 }
