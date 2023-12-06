@@ -9,6 +9,7 @@ export default {
         serif: ['serif'],
         oregano: ['Oregano', 'cursive'],
         noto: ['Noto Sans JP', 'sans-serif'],
+        hand: ['Gochi Hand', 'cursive'],
       },
     },
   },
