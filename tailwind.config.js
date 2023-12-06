@@ -8,7 +8,7 @@ export default {
         sans: ['Assistant', 'sans-serif'],
         serif: ['serif'],
         oregano: ['Oregano', 'cursive'],
-        Noto: ['Noto Serif JP', 'sans-serif'],
+        noto: ['Noto Sans JP', 'sans-serif'],
       },
     },
   },
