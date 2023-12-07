@@ -2,7 +2,7 @@ import newsImage from "../assets/news/new_img.jpg";
 
 export default function News() {
   return (
-    <section className="lg:py-10 md:px-2 sm:px-4 bg-stone-100" id="news">
+    <section className="py-10 lg:py-10 bg-stone-100" id="news">
       <div className="max-w-screen-xl py-4 mx-auto lg:py-6 md:px-6">
         {/* Section Title*/}
         <div className="text-center flex flex-col items-center mb-8">
