@@ -48,22 +48,32 @@ export default function Movies() {
                   隠<br />し
                 </div>
               </div>
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow-lg object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/spirited_away.jpg"
-                  alt="Spirited Away"
+                  alt="Sprited Away"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media1.tenor.com/m/GMHO7sGXMGEAAAAC/spirited-away.gif"
+                  alt="Sprited Away Hover"
                 />
               </div>
             </div>
 
             {/* Movie 2 */}
             <div className="w-full px-4 flex flex-row space-x-8 items-center mt-20">
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/grave_of_the_fireflies.jpg"
                   alt="Grave of the Fireflies"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media1.tenor.com/m/HiklFanL_mwAAAAC/isao-takahata-takahata-isao.gif"
+                  alt="Grave of the Firedlies Hover"
                 />
               </div>
               <div className="w-1/3 flex items-center justify-center">
@@ -112,22 +122,32 @@ export default function Movies() {
                   け<br />姫
                 </div>
               </div>
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/princess_mononoke.png"
                   alt="Princess Mononoke"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media1.tenor.com/m/v2V8avYcGtEAAAAd/princess-mononoke-san.gif"
+                  alt="Princess Mononoke Hover"
                 />
               </div>
             </div>
 
             {/* Movie 4 */}
             <div className="w-full px-4 flex flex-row space-x-8 items-center mt-20">
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/howls_moving_castle.jpg"
                   alt="Howl's Moving Castle"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media1.tenor.com/m/TvwpulcZhz0AAAAC/howl-anime.gif"
+                  alt="Howl's Moving Castle Hover"
                 />
               </div>
               <div className="w-1/3 flex items-center justify-center">
@@ -161,7 +181,10 @@ export default function Movies() {
             <div className="w-full px-4 flex flex-row space-x-8 items-center mt-20">
               <div className="w-1/3 bg-gradient-to-tl from-sky-200 to-sky-600 rounded-xl shadow-lg p-4 aspect-square flex items-center justify-center text-white">
                 <div className="flex flex-col">
-                  <h3 className="font-bold md:text-4xl">My Neighbor Totoro</h3>
+                  <h3 className="font-bold md:text-4xl">
+                    My Neighbor
+                    <br /> Totoro
+                  </h3>
                   <span className="lg:text-md">| 1988</span>
                   <p className="lg:text-md italic mt-4">
                     Animation, Comedy, Family
@@ -178,22 +201,32 @@ export default function Movies() {
                   ト<br />ロ
                 </div>
               </div>
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow-lg object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/my_neighbor_totoro.jpg"
                   alt="My Neighbor Totoro"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media.giphy.com/media/kCG9dYUTPyIJG/giphy.gif"
+                  alt="My Neighbor Totoro Hover"
                 />
               </div>
             </div>
 
             {/* Movie 6 */}
             <div className="w-full px-4 flex flex-row space-x-8 items-center mt-20">
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/castle_in_the_sky.jpg"
                   alt="Castle in the Sky"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media1.tenor.com/m/cjKAMgp1RjYAAAAC/castle-in-the-sky-pazu-and-sheeta.gif"
+                  alt="Casle in the Sky Hover"
                 />
               </div>
               <div className="w-1/3 flex items-center justify-center">
@@ -209,7 +242,10 @@ export default function Movies() {
               </div>
               <div className="w-1/3 bg-gradient-to-tl from-violet-200 to-orange-200 rounded-xl shadow-lg p-4 aspect-square flex items-center justify-center text-white">
                 <div className="flex flex-col">
-                  <h3 className="font-bold md:text-4xl">Castle in the Sky</h3>
+                  <h3 className="font-bold md:text-4xl">
+                    Castle in <br />
+                    the Sky
+                  </h3>
                   <span className="lg:text-md">| 1986</span>
                   <p className="lg:text-md italic mt-4">
                     Animation, Adventure, Family
@@ -236,22 +272,32 @@ export default function Movies() {
                   ち<br />ぬ
                 </div>
               </div>
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/the_wind_rises.jpg"
                   alt="The Wind Rises"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media1.tenor.com/m/iVZzmxzYbPgAAAAC/cottagecore.gif"
+                  alt="The Wind Rises Hover"
                 />
               </div>
             </div>
 
             {/* Movie 8 */}
             <div className="w-full px-4 flex flex-row space-x-8 items-center mt-20">
-              <div className="w-1/3 relative">
+              <div className="w-1/3 relative group">
                 <img
-                  className="w-full h-full rounded-full shadow object-cover object-center"
+                  className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
                   src="./src/assets/movies/porco_rosso.jpg"
                   alt="Porco Rosso"
+                />
+                <img
+                  className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
+                  src="https://media.giphy.com/media/fwqAg6ZS6ebL2/giphy.gif"
+                  alt="Porco Rosso Hover"
                 />
               </div>
               <div className="w-1/3 flex items-center justify-center">
