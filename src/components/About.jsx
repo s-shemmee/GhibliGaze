@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       className="py-10 lg:py-20 bg-stone-100 dark:bg-gray-800"
-      id="about-section"
+      id="about"
     >
       <div className="max-w-screen-xl py-4 mx-auto lg:py-6 md:px-6">
         {/* Two-column layout with flex */}
