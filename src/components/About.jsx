@@ -1,9 +1,6 @@
 export default function About() {
   return (
-    <section
-      className="py-10 lg:py-20 bg-stone-100 dark:bg-gray-800"
-      id="about"
-    >
+    <section className="py-10 lg:py-20 bg-stone-100" id="about">
       <div className="max-w-screen-xl py-4 mx-auto lg:py-6 md:px-6">
         {/* Two-column layout with flex */}
         <div className="flex flex-wrap">
@@ -12,15 +9,15 @@ export default function About() {
             <div className="lg:max-w-md">
               {/* Section title */}
               <div className="px-4 pl-4 mb-6 border-l-4 border-cyan-500">
-                <span className="text-sm text-gray-600 uppercase dark:text-gray-400">
+                <span className="text-sm text-gray-600 uppercase">
                   About Our Story
                 </span>
-                <h1 className="mt-2 text-3xl font-black font-oregano text-gray-700 md:text-5xl dark:text-gray-300">
+                <h1 className="mt-2 text-3xl font-black font-oregano text-gray-700 md:text-5xl">
                   Discovering Ghibli Magic
                 </h1>
               </div>
               {/* Main content paragraph */}
-              <p className="px-4 mb-5 text-base leading-7 text-gray-500 dark:text-gray-400">
+              <p className="px-4 mb-5 text-base leading-7 text-gray-500">
                 Hey there ૮ ˶ᵔ ᵕ ᵔ˶ ა! Let's dive into the magical world of
                 Studio Ghibli 🌱, co-founded in '85 by the dynamic duo of
                 animated wonders, <strong>Isao Takahata</strong> and{" "}
@@ -46,10 +43,9 @@ export default function About() {
                 Zooming into the present, Studio Ghibli continues to dominate.
                 Their last four films—<strong>THE WIND RISES (2013)</strong>,{" "}
                 <strong>THE TALE OF THE PRINCESS KAGUYA (2013)</strong>,{" "}
-                <strong>WHEN MARNIE WAS THERE (2014)</strong>, and{" "}
                 <strong>THE RED TURTLE (2016)</strong>—nailed four consecutive
                 Academy Award nominations.
-                <br></br>
+                <br/>
                 And the magic doesn't stop—there's a new Ghibli masterpiece in
                 the works!🌠
               </p>
