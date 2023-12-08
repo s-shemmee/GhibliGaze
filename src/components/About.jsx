@@ -45,9 +45,9 @@ export default function About() {
                 <strong>THE TALE OF THE PRINCESS KAGUYA (2013)</strong>,{" "}
                 <strong>THE RED TURTLE (2016)</strong>—nailed four consecutive
                 Academy Award nominations.
-                <br/>
-                And the magic doesn't stop—there's a new Ghibli masterpiece in
-                the works!🌠
+              </p>
+              <p className="px-4 mb-5 text-base leading-7 text-gray-500 dark:text-gray-400">
+                And the magic doesn't stop—there's a new Ghibli masterpiece in the works!🌠
               </p>
             </div>
           </div>
