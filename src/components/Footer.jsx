@@ -19,17 +19,17 @@ export default function Footer() {
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-2">
-                  <a href="#" class="hover:underline">
+                  <a href="#about" class="hover:underline">
                     About
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="#" class="hover:underline">
-                    Films
+                  <a href="#movies" class="hover:underline">
+                    Movies
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">
+                  <a href="#news" class="hover:underline">
                     News
                   </a>
                 </li>
