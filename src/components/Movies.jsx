@@ -56,7 +56,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media1.tenor.com/m/GMHO7sGXMGEAAAAC/spirited-away.gif"
+                  src="./src/assets/movies/spiritedaway.gif"
                   alt="Sprited Away Hover"
                 />
               </div>
@@ -72,7 +72,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media1.tenor.com/m/HiklFanL_mwAAAAC/isao-takahata-takahata-isao.gif"
+                  src="./src/assets/movies/graveofthefireflies.gif"
                   alt="Grave of the Firedlies Hover"
                 />
               </div>
@@ -130,7 +130,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media1.tenor.com/m/v2V8avYcGtEAAAAd/princess-mononoke-san.gif"
+                  src="./src/assets/movies/princessmononokesan.gif"
                   alt="Princess Mononoke Hover"
                 />
               </div>
@@ -146,7 +146,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media1.tenor.com/m/TvwpulcZhz0AAAAC/howl-anime.gif"
+                  src="./src/assets/movies/howlsmovingcastle.gif"
                   alt="Howl's Moving Castle Hover"
                 />
               </div>
@@ -209,7 +209,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media.giphy.com/media/kCG9dYUTPyIJG/giphy.gif"
+                  src="./src/assets/movies/myneighbortotoro.gif"
                   alt="My Neighbor Totoro Hover"
                 />
               </div>
@@ -225,8 +225,8 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media1.tenor.com/m/cjKAMgp1RjYAAAAC/castle-in-the-sky-pazu-and-sheeta.gif"
-                  alt="Casle in the Sky Hover"
+                  src="./src/assets/movies/castleinthesky.gif"
+                  alt="Castle in the Sky Hover"
                 />
               </div>
               <div className="w-1/3 flex items-center justify-center">
@@ -280,7 +280,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media1.tenor.com/m/iVZzmxzYbPgAAAAC/cottagecore.gif"
+                  src="./src/assets/movies/thewindrises.gif"
                   alt="The Wind Rises Hover"
                 />
               </div>
@@ -296,7 +296,7 @@ export default function Movies() {
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="https://media.giphy.com/media/fwqAg6ZS6ebL2/giphy.gif"
+                  src="./src/assets/movies/porcorosso.gif"
                   alt="Porco Rosso Hover"
                 />
               </div>
