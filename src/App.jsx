@@ -16,11 +16,12 @@ function App() {
       <Movies />
       <Gallery />
       <News />
+      <Newsletter />
 
     {/*
       <Trailers />
 
-      <Newsletter />
+
   <Footer />*/}
     </div>
   )

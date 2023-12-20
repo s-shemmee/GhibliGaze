@@ -19,6 +19,7 @@ export default function Newsletter() {
           <div className="flex flex-wrap pb-1">
             <div className="w-full mb-3 md:flex-1 md:mb-0 md:mr-4">
               <input
+                id="emailInput"
                 className="w-full px-4 py-3 leading-tight text-gray-500 placeholder-gray-500 border border-gray-200 rounded-md shadow-sm dark:border-gray-900 dark:bg-gray-800 dark:text-gray-400"
                 type="text"
                 placeholder="Enter your email"
