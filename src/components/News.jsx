@@ -150,12 +150,12 @@ export default function News() {
                   <p className="font-serif">
                     GKIDS Acquires North American Rights to “Mars Express”
                   </p>
-                  <p className="mt-2 text-xs text-gray-400">
-                    26 Oct
-                    <p className="block text-red-400 lg:ml-2 lg:inline hover:underline">
+                  <div className="mt-2 text-xs text-gray-400">
+                    <span>26 Oct</span>
+                    <span className="block text-red-400 lg:ml-2 lg:inline hover:underline">
                       Announcements
-                    </p>
-                  </p>
+                    </span>
+                  </div>
                 </div>
               </div>
               {/* Article 2 */}
@@ -169,12 +169,12 @@ export default function News() {
                   <p className="font-serif">
                     GKIDS to Release “Blue Giant” In Select Theaters Nationwide
                   </p>
-                  <p className="mt-2 text-xs text-gray-400">
-                    13 Sep
-                    <p className="block text-red-400 lg:ml-2 lg:inline hover:underline">
+                  <div className="mt-2 text-xs text-gray-400">
+                    <span>13 Sep</span>
+                    <span className="block text-red-400 lg:ml-2 lg:inline hover:underline">
                       Theatrical
-                    </p>
-                  </p>
+                    </span>
+                  </div>
                 </div>
               </div>
               {/* Article 3 */}
@@ -188,12 +188,12 @@ export default function News() {
                   <p className="font-serif">
                     GKIDS To Release EVANGELION:3.0+1.11 THRICE UPON A TIME
                   </p>
-                  <p className="mt-2 text-xs text-gray-400">
-                    31 July
-                    <p className="block text-red-400 lg:ml-2 lg:inline hover:underline">
+                  <div className="mt-2 text-xs text-gray-400">
+                    <span>31 July</span>
+                    <span className="block text-red-400 lg:ml-2 lg:inline hover:underline">
                       Home Video
-                    </p>
-                  </p>
+                    </span>
+                  </div>
                 </div>
               </div>
               {/* Article 4 */}
@@ -207,12 +207,12 @@ export default function News() {
                   <p className="font-serif">
                     GKIDS to Release “Ernest & Celestine: A Trip to Gibberitia”
                   </p>
-                  <p className="mt-2 text-xs text-gray-400">
-                    24 July
-                    <p className="block text-red-400 lg:ml-2 lg:inline hover:underline">
+                  <div className="mt-2 text-xs text-gray-400">
+                    <span>24 June</span>
+                    <span className="block text-red-400 lg:ml-2 lg:inline hover:underline">
                       Voice Cast
-                    </p>
-                  </p>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
