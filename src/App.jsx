@@ -14,15 +14,11 @@ function App() {
       <Hero />
       <About />
       <Movies />
+      {/*<Trailers />*/}
       <Gallery />
       <News />
       <Newsletter />
-
-    {/*
-      <Trailers />
-
-
-  <Footer />*/}
+      <Footer />
     </div>
   )
 }
