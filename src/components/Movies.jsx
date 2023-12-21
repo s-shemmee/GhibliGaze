@@ -2,6 +2,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import spiritedAwayImage from "../assets/movies/spirited_away.jpg";
+import spiritedAwayGif from "../assets/movies/spiritedaway.gif";
+import graveOfTheFirefliesImage from "../assets/movies/grave_of_the_fireflies.jpg";
+import graveOfTheFirefliesGif from "../assets/movies/graveofthefireflies.gif";
+import princessMononokeImage from "../assets/movies/princess_mononoke.png";
+import princessMononokeGif from "../assets/movies/princessmononokesan.gif";
+import howlsMovingCastleImage from "../assets/movies/howls_moving_castle.jpg";
+import howlsMovingCastleGif from "../assets/movies/howlsmovingcastle.gif";
+
 export default function Movies() {
   const settings = {
     infinite: true,
@@ -51,12 +60,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/spirited_away.jpg"
+                  src={spiritedAwayImage}
                   alt="Sprited Away"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/spiritedaway.gif"
+                  src={spiritedAwayGif}
                   alt="Sprited Away Hover"
                 />
               </div>
@@ -67,12 +76,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/grave_of_the_fireflies.jpg"
+                  src={graveOfTheFirefliesImage}
                   alt="Grave of the Fireflies"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/graveofthefireflies.gif"
+                  src={graveOfTheFirefliesGif}
                   alt="Grave of the Firedlies Hover"
                 />
               </div>
@@ -125,12 +134,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/princess_mononoke.png"
+                  src={princessMononokeImage}
                   alt="Princess Mononoke"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/princessmononokesan.gif"
+                  src={princessMononokeGif}
                   alt="Princess Mononoke Hover"
                 />
               </div>
@@ -141,12 +150,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/howls_moving_castle.jpg"
+                  src={howlsMovingCastleImage}
                   alt="Howl's Moving Castle"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/howlsmovingcastle.gif"
+                  src={howlsMovingCastleGif}
                   alt="Howl's Moving Castle Hover"
                 />
               </div>
