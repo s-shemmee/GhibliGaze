@@ -14,7 +14,7 @@ function App() {
       <Hero />
       <About />
       <Movies />
-      {/*<Trailers />*/}
+      <Trailers />
       <Gallery />
       <News />
       <Newsletter />
