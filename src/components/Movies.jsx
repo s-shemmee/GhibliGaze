@@ -10,6 +10,14 @@ import princessMononokeImage from "../assets/movies/princess_mononoke.png";
 import princessMononokeGif from "../assets/movies/princessmononokesan.gif";
 import howlsMovingCastleImage from "../assets/movies/howls_moving_castle.jpg";
 import howlsMovingCastleGif from "../assets/movies/howlsmovingcastle.gif";
+import myNeighborTotoroImage from "../assets/movies/my_neighbor_totoro.jpg"
+import myNeighborTotoroGif from "../assets/movies/myneighbortotoro.gif"
+import castleInTheSkyImage from "../assets/movies/castle_in_the_sky.jpg"
+import castleInTheSkyGif from "../assets/movies/castleinthesky.gif"
+import theWindRisesImage from "../assets/movies/the_wind_rises.jpg"
+import theWindRisesGif from "../assets/movies/thewindrises.gif"
+import porcoRossoImage from "../assets/movies/porco_rosso.jpg"
+import porcoRossoGif from "../assets/movies/porcorosso.gif"
 
 export default function Movies() {
   const settings = {
@@ -213,12 +221,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/my_neighbor_totoro.jpg"
+                  src={myNeighborTotoroImage}
                   alt="My Neighbor Totoro"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/myneighbortotoro.gif"
+                  src={myNeighborTotoroGif}
                   alt="My Neighbor Totoro Hover"
                 />
               </div>
@@ -229,12 +237,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/castle_in_the_sky.jpg"
+                  src={castleInTheSkyImage}
                   alt="Castle in the Sky"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/castleinthesky.gif"
+                  src={castleInTheSkyGif}
                   alt="Castle in the Sky Hover"
                 />
               </div>
@@ -284,12 +292,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/the_wind_rises.jpg"
+                  src={theWindRisesImage}
                   alt="The Wind Rises"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/thewindrises.gif"
+                  src={theWindRisesGif}
                   alt="The Wind Rises Hover"
                 />
               </div>
@@ -300,12 +308,12 @@ export default function Movies() {
               <div className="w-1/3 relative group">
                 <img
                   className="w-full h-full rounded-full shadow object-cover object-center transition-transform transform hover:scale-110"
-                  src="./src/assets/movies/porco_rosso.jpg"
+                  src={porcoRossoImage}
                   alt="Porco Rosso"
                 />
                 <img
                   className="hidden w-full h-full rounded-full shadow object-cover object-center absolute top-0 left-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  src="./src/assets/movies/porcorosso.gif"
+                  src={porcoRossoGif}
                   alt="Porco Rosso Hover"
                 />
               </div>
