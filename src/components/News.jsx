@@ -99,7 +99,7 @@ export default function News() {
             </div>
           </div>
           {/* Featured Article */}
-          <div className="relative flex col-span-12 bg-cover bg-no-repeat bg-gray-500 xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96">
+          <div className="relative flex col-span-12 bg-cover bg-no-repeat bg-gray-500 xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96 m-2">
             <img
               src={newsImage}
               alt="News Image"
