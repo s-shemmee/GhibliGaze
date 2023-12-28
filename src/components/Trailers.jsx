@@ -41,19 +41,11 @@ export default function Trailers() {
   ];
 
   const opts = {
-    height: '700',
+    height: '100%',
     width: '100%',
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
-  };
-
-  const handlePrevClick = () => {
-    setCurrentTrailer((prevTrailer) => (prevTrailer - 1 + youtubeTrailers.length) % youtubeTrailers.length);
-  };
-
-  const handleNextClick = () => {
-    setCurrentTrailer((prevTrailer) => (prevTrailer + 1) % youtubeTrailers.length);
   };
 
   return (
@@ -69,22 +61,9 @@ export default function Trailers() {
         </div>
 
         {/* Big Frame for Currently Played Trailer */}
-        <div className="w-full h-full mb-4 border-8 border-yellow-500 rounded-lg">
-          <YouTube videoId={youtubeTrailers[currentTrailer].id} opts={opts} />
-
-          {/* Custom Arrow Buttons */}
-          <button
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 text-2xl text-red focus:outline-none"
-            onClick={handlePrevClick}
-          >
-            &lt;
-          </button>
-          <button
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 text-2xl text-red focus:outline-none"
-            onClick={handleNextClick}
-          >
-            &gt;
-          </button>
+        <div className="w-full h-full mb-4 border-8 border-yellow-500 rounded-lg aspect-video">
+          <YouTube videoId={youtubeTrailers[currentTrailer].id} opts={opts}
+          className="aspect-video h-100 w-full" />
         </div>
 
         {/* Carousel of Smaller Frames with Thumbnails */}
@@ -92,17 +71,17 @@ export default function Trailers() {
           items={youtubeTrailers.map((trailer) => (
             <div
               key={trailer.id}
-              className={`w-64 h-32 cursor-pointer ${
+              className={`aspect-video lg:w-72 lg:h-40 md:h-32 sm:h-28 cursor-pointer${
                 currentTrailer === youtubeTrailers.indexOf(trailer)
-                  ? 'border-4 border-yellow-500 rounded-lg'
+                  ? ' border-4 border-yellow-500 rounded-lg'
                   : ''
-              }`}
+              }`}              
               onClick={() => setCurrentTrailer(youtubeTrailers.indexOf(trailer))}
             >
               <img
                 src={trailer.thumbnail}
                 alt={`Thumbnail for Trailer ${youtubeTrailers.indexOf(trailer) + 1}`}
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-full object-fit rounded-md"
               />
             </div>
           ))}
@@ -111,6 +90,7 @@ export default function Trailers() {
               1280: { items: 4 }, 
               768: { items: 3 }, 
               480: { items: 2 },
+              0: { items: 1 },
             }
           }
           mouseTrackingEnabled

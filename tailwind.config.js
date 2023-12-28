@@ -11,8 +11,13 @@ export default {
         noto: ['Noto Sans JP', 'sans-serif'],
         hand: ['Gochi Hand', 'cursive'],
       },
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+      },
     },
   },
   plugins: [],
 }
-
