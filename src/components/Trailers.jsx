@@ -71,7 +71,7 @@ export default function Trailers() {
           items={youtubeTrailers.map((trailer) => (
             <div
               key={trailer.id}
-              className={`aspect-video lg:w-72 lg:h-40 md:h-32 sm:h-28 cursor-pointer${
+              className={`aspect-video lg:w-72 lg:h-40 md:w-64 md:h-36 sm:w-52 sm:h-28 cursor-pointer${
                 currentTrailer === youtubeTrailers.indexOf(trailer)
                   ? ' border-4 border-yellow-500 rounded-lg'
                   : ''
@@ -90,7 +90,6 @@ export default function Trailers() {
               1280: { items: 4 }, 
               768: { items: 3 }, 
               480: { items: 2 },
-              0: { items: 1 },
             }
           }
           mouseTrackingEnabled
