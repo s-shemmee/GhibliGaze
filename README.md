@@ -1,64 +1,48 @@
 # GhibliGaze
 
-GhibliGaze is a visually stunning landing page that showcases Studio Ghibli-inspired content, carefully crafted to match the vibes and aesthetic of the beloved animation studio. Immerse yourself in enchanting landscapes and captivating characters, as each section unfolds a spellbinding tale.
-
 ## Overview
 
-GhibliGaze is more than just a landing page; it's an immersive experience designed to transport visitors into the magical world of Studio Ghibli. From the carefully curated hero images to detailed information about Studio Ghibli, featured movies, trailers, a captivating gallery, the latest news, a convenient newsletter sign-up, and a thoughtfully designed footer – every element harmonizes to capture the essence of Studio Ghibli's enchanting universe.
+GhibliGaze is a landing page project dedicated to celebrating the extraordinary creations of Studio Ghibli. The page showcases information about Ghibli's iconic movies, captivating trailers, a visually stunning gallery, and the latest news from the Ghibli universe.
 
-## Project Structure
+![Preview](preview.jpg)
 
-### Sections:
+## Technologies Used
 
-- **Hero Images:** Visually stunning images designed to match the vibes and aesthetic of Studio Ghibli.
-- **About:** Dive into detailed information about Studio Ghibli.
-- **Featured Movies:** Explore a curated selection of Studio Ghibli's most iconic movies.
-- **Trailers:** Watch captivating trailers that bring the magic to life.
-- **Gallery:** Immerse yourself in a collection of enchanting images inspired by Studio Ghibli.
-- **News:** Stay updated with the latest news and articles related to Studio Ghibli.
-- **Newsletter:** Sign up for newsletters to receive exclusive updates and content.
-- **Footer:** Explore additional resources and information about GhibliGaze.
+- **React (JSX)**
+- **Tailwind CSS**
+- **YouTube API**
 
 ## Getting Started
 
-1. Clone the repository:
-```bash
-  git clone https://github.com/s-shemmee/GhibliGaze.git
-```
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/s-shemmee/GhibliGaze.git
+   ```
 
-2. Install dependencies:
-```bash
-  cd GhibliGaze
-  npm install
-```
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd GhibliGaze
+   ```
 
-3.Run the development server:
-```bash
-  npm run dev
-```
-This will start the development server, and you can view the landing page at http://localhost:3000 in your browser.
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-4. Build and Deploy
-- To build the project for production:
+4. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   > This will start the development server, and you can view the landing page at http://localhost:3000 in your browser.
 
-```bash
-  npm run build
-```
-This will generate optimized and minified assets in the dist directory.
+## Demo
 
-- To deploy the project:
+A live demo of GhibliGaze is available at [LIVE DEMO](https://ghibli-gaze.vercel.app). Explore the magic of Studio Ghibli at your fingertips!
 
-```bash
-  npm run deploy
-```
-This command might vary depending on your deployment setup.
+## Credits
 
-# Demo
-A live demo of GhibliGaze is available at [LINK TO LIVE DEMO]().
+- The anime posters in the Movies section were found and used from the Behance project *Posters : Studio Ghibli* of [Joseph K. Roman](https://www.behance.net/josephroman).
 
-# Credits
-- GhibliGaze was created by [s-shemmee](https://github.com/s-shemmee).
-- The anime posters in the Movies section were found and used from the Behance project of [Joseph K. Roman](https://www.behance.net/josephroman).
+## License
 
-# License
 This project is licensed under the MIT License.
