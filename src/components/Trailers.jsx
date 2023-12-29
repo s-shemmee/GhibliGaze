@@ -1,3 +1,11 @@
+// 📝 Note: Refactoring this code may result in spontaneous hair pulling and extreme bouts of "code regret."
+// Achieving this layout and functionality was a journey, and I don't have the time or the courage to go through that again. 😭
+// Proceed with caution or grab some snacks and enjoy the show! 💻🍿
+
+// Consider using the YouTube API from the Google Console to resolve embedding errors.
+// Refactoring to use the API directly for fetching video data may be a solution.
+// See the YouTube Data API documentation: https://developers.google.com/youtube/v3
+
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import AliceCarousel from 'react-alice-carousel';
