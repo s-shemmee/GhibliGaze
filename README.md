@@ -4,7 +4,7 @@
 
 GhibliGaze is a landing page project dedicated to celebrating the extraordinary creations of Studio Ghibli. The page showcases information about Ghibli's iconic movies, captivating trailers, a visually stunning gallery, and the latest news from the Ghibli universe.
 
-![Preview](preview.jpg)
+![Preview](./src/assets/preview.JPG)
 
 ## Technologies Used
 
