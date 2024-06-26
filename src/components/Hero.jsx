@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import whiteLogo from "../assets/ghibli_logo_white.png";
+import blackLogo from "../assets/ghibli_logo_black.png";
 
 const navigation = [
-  { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Movies", href: "#movies" },
   { name: "Trailers", href: "#trailers" },
@@ -22,12 +23,13 @@ export default function Hero() {
         <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           {/* Logo */}
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#hero" className="-m-1.5 p-1.5">
               <span className="sr-only">GhibliGaze</span>
               <img
                 className="h-10 w-auto"
-                src="https://www.studioghibli.com.au/wp-content/uploads/2017/07/ghibli_logo_white-1.png"
+                src={whiteLogo}
                 alt="Ghibli Studio Logo"
+                loading="lazy"
               />
             </a>
           </div>
@@ -36,10 +38,10 @@ export default function Hero() {
           <div className="flex lg:hidden">
             <button
               type="button"
+              aria-label="Open main menu"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
@@ -50,6 +52,7 @@ export default function Hero() {
               <a
                 key={item.name}
                 href={item.href}
+                aria-label={`Navigate to ${item.name}`}
                 className="text-sm font-semibold leading-6 text-white transition duration-300 hover:text-[#618548] focus:text-[#618548] focus:outline-none relative group"
               >
                 {item.name}
@@ -68,12 +71,13 @@ export default function Hero() {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-stone-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="#hero" className="-m-1.5 p-1.5">
                 <span className="sr-only">GhibliGaze</span>
                 <img
-                  className="h-8 w-auto"
-                  src="https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/300px-Studio_Ghibli_logo.svg.png?20170424174236"
+                  className="h-10 w-auto"
+                  src={blackLogo}
                   alt="Ghibli Studio Logo"
+                  loading="lazy"
                 />
               </a>
               <button
@@ -112,6 +116,7 @@ export default function Hero() {
           autoPlay
           loop
           muted
+          playsInline
         >
           <source
             src="https://cdn.artstation.com/p/video_sources/000/146/133/2k.mp4"
@@ -126,8 +131,8 @@ export default function Hero() {
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
             <h1 className="font-oregano text-7xl md:text-8xl lg:text-9xl text-white font-extrabold mb-5">
-              Gaze On
-              <strong className="block font-extrabold text-[#618548]">
+              Gaze On{" "}
+              <strong className="block text-transparent bg-clip-text bg-gradient-to-r from-[#4e6a3a] to-[#618548]">
                 GhibliGaze
               </strong>
             </h1>
@@ -143,7 +148,7 @@ export default function Hero() {
             </p>
             <div className="mt-8 flex items-center gap-4 text-center">
               <a
-                href="#"
+                href="#about"
                 className="block rounded-3xl bg-[#618548] px-12 py-3 text-sm font-medium text-stone-100 shadow hover:bg-[#4e6a3a] focus:outline-none focus:ring active:bg-[#577841]"
               >
                 Explore Now
