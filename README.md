@@ -15,16 +15,19 @@ GhibliGaze is a landing page project dedicated to celebrating the extraordinary 
 ## Getting Started
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/s-shemmee/GhibliGaze.git
    ```
 
 2. **Navigate to the Project Directory:**
+
    ```bash
    cd GhibliGaze
    ```
 
 3. **Install Dependencies:**
+
    ```bash
    npm install
    ```
@@ -41,7 +44,7 @@ A live demo of GhibliGaze is available at [LIVE DEMO](https://ghibli-gaze.vercel
 
 ## Credits
 
-- The anime posters in the Movies section were found and used from the Behance project *Posters : Studio Ghibli* of [Joseph K. Roman](https://www.behance.net/josephroman).
+- The anime posters in the Movies section were found and used from the Behance project _Posters : Studio Ghibli_ of [Joseph K. Roman](https://www.behance.net/josephroman).
 
 ## License
 
