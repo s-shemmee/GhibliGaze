@@ -2,15 +2,15 @@
 
 ## Overview
 
-GhibliGaze is a landing page project dedicated to celebrating the extraordinary creations of Studio Ghibli. The page showcases information about Ghibli's iconic movies, captivating trailers, a visually stunning gallery, and the latest news from the Ghibli universe.
+GhibliGaze is a single-page application dedicated to celebrating the extraordinary creations of Studio Ghibli. The page showcases information about Ghibli's iconic movies, captivating trailers, a visually stunning gallery, and the latest news from the Ghibli universe.
 
-![Preview](./src/assets/preview.JPG)
+![Preview](https://github.com/s-shemmee/GhibliGaze/assets/56132945/6cd724fc-a1b4-4730-97c2-e473ea015fad)
 
 ## Technologies Used
 
 - **React (JSX)**
 - **Tailwind CSS**
-- **YouTube API**
+- **YouTube Data API V3**
 
 ## Getting Started
 
@@ -32,11 +32,22 @@ GhibliGaze is a landing page project dedicated to celebrating the extraordinary 
    npm install
    ```
 
-4. **Start the Development Server:**
+4. **Set Up YouTube Data API Key:**
+
+   - Obtain your YouTube Data API v3 key from the [Google Developers Console](https://console.developers.google.com/).
+   - Create a `.env` file in the root directory of your project.
+   - Add your API key to the `.env` file as follows:
+
+     ```plaintext
+     VITE_YOUTUBE_API_KEY=YOUR_YOUTUBE_DATA_API_KEY
+     ```
+
+5. **Start the Development Server:**
+
    ```bash
    npm run dev
    ```
-   > This will start the development server, and you can view the landing page at http://localhost:3000 in your browser.
+   > This will start the development server, and you can view the landing page at `http://localhost:5173` in your browser.
 
 ## Demo
 
