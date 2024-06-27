@@ -14,7 +14,28 @@
   </head>
   <body>
     <div id="root"></div>
-    <audio id="backgroundAudio" src="/MerryGoRoundofLife.mp3" autoplay loop></audio>
+    <audio id="backgroundAudio" src="/MerryGoRoundofLife.mp3" loop></audio>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("backgroundAudio");
+        audio.volume = 0.5; // Set the volume
+        audio.muted = false; // Ensure it's not muted
+
+        // Attempt to play audio after user interaction
+        document.body.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.play().catch((error) => {
+              console.error("Autoplay was prevented:", error);
+            });
+          }
+        });
+
+        // Try to autoplay (may be blocked by browser)
+        audio.play().catch((error) => {
+          console.error("Autoplay was prevented:", error);
+        });
+      });
+    </script>
   </body>
 </html>
