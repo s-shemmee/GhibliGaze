@@ -1,3 +1,16 @@
+import pic1 from "../assets/gallery/pic1.png";
+import pic2 from "../assets/gallery/pic2.jpg";
+import pic3 from "../assets/gallery/pic3.jpg";
+import pic4 from "../assets/gallery/pic4.png";
+import pic5 from "../assets/gallery/pic5.jpg";
+import pic6 from "../assets/gallery/pic6.png";
+import pic7 from "../assets/gallery/pic7.jpg";
+import pic8 from "../assets/gallery/pic8.jpg";
+import pic9 from "../assets/gallery/pic9.jpg";
+import pic10 from "../assets/gallery/pic10.jpg";
+import pic11 from "../assets/gallery/pic11.jpg";
+import pic12 from "../assets/gallery/pic12.jpg";
+
 export default function Gallery() {
   return (
     <section className="py-10 lg:py-10 bg-stone-100" id="gallery">
@@ -13,23 +26,25 @@ export default function Gallery() {
           <div className="flex flex-wrap -m-1 md:-m-2">
             <div className="w-full px-4 sm:w-1/3">
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] lg:h-[450px] transition duration-500   group-hover:origin-center hover:scale-105"
-                      src="https://media.wired.co.uk/photos/64f8ce9745eea1aad84ccc6c/1:1/w_1038,h_1038,c_limit/Studio-Ghibli-Ranked-Culture-HERON_img_1.jpg"
-                      alt=""
+                      src={pic1}
+                      alt="The Boy and the Heron"
+                      loading="lazy"
                     />
                   </div>
                 </a>
               </div>
               <div className="mb-8">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://assets-prd.ignimgs.com/2022/07/22/princess-mononoke-1658507340192.jpg"
+                      src={pic2}
                       alt="Princess Mononoke"
+                      loading="lazy"
                     />
                   </div>
                 </a>
@@ -37,23 +52,25 @@ export default function Gallery() {
             </div>
             <div className="w-full px-4 sm:w-1/3 ">
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://www.cartoonbrew.com/wp-content/uploads/2021/04/fireflies_5-1280x600.jpg"
+                      src={pic3}
                       alt="Grave of the Fireflies"
+                      loading="lazy"
                     />
                   </div>
                 </a>
               </div>
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] lg:h-[450px]  transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://i.insider.com/60f7d8112a723b0011e4f21b?width=700"
+                      src={pic4}
                       alt="Spirited Away"
+                      loading="lazy"
                     />
                   </div>
                 </a>
@@ -61,23 +78,25 @@ export default function Gallery() {
             </div>
             <div className="w-full px-4 sm:w-1/3 ">
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] lg:h-[450px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://www.nme.com/wp-content/uploads/2018/08/ponyo.jpg"
+                      src={pic5}
                       alt="Ponyo"
+                      loading="lazy"
                     />
                   </div>
                 </a>
               </div>
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://studioghiblimovies.com/wp-content/uploads/2016/04/46394_my_neighbor_totoro_studio_ghibli.jpg"
+                      src={pic6}
                       alt="My Neighbor Totoro"
+                      loading="lazy"
                     />
                   </div>
                 </a>
@@ -87,23 +106,25 @@ export default function Gallery() {
           <div className="flex flex-wrap -m-1 md:-m-2">
             <div className="w-full px-4 sm:w-1/3">
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] lg:h-[450px] transition duration-500   group-hover:origin-center hover:scale-105"
-                      src="https://assets-prd.ignimgs.com/2022/07/22/howls-moving-castle-1658448130903.jpg"
+                      src={pic7}
                       alt="Howl's Moving Castle"
+                      loading="lazy"
                     />
                   </div>
                 </a>
               </div>
               <div className="mb-8">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://www.brightwalldarkroom.com/wp-content/uploads/2017/04/castleinthesky.jpg"
+                      src={pic8}
                       alt="Castle in the Sky"
+                      loading="lazy"
                     />
                   </div>
                 </a>
@@ -111,23 +132,25 @@ export default function Gallery() {
             </div>
             <div className="w-full px-4 sm:w-1/3 ">
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://4.bp.blogspot.com/-EM7f6LPQGb0/U3VvFWW3WWI/AAAAAAAAKgg/4_vPo6nAo6g/s1600/nausicaa.jpg"
+                      src={pic9}
                       alt="Nausicaä of the Valley of the Wind"
+                      loading="lazy"
                     />
                   </div>
                 </a>
               </div>
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] lg:h-[450px]  transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://assets-prd.ignimgs.com/2022/07/21/the-tale-of-the-princess-kaguya-2-1658447536074.jpg?"
+                      src={pic10}
                       alt="The Tale of the Princess Kaguya"
+                      loading="lazy"
                     />
                   </div>
                 </a>
@@ -135,23 +158,25 @@ export default function Gallery() {
             </div>
             <div className="w-full px-4 sm:w-1/3 ">
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] lg:h-[450px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://assets-prd.ignimgs.com/2022/07/22/kikis-delivery-service-1658448111692.jpg"
+                      src={pic11}
                       alt="Kiki’s Delivery Service"
+                      loading="lazy"
                     />
                   </div>
                 </a>
               </div>
               <div className="mb-8 ">
-                <a href="#">
+                <a href="/">
                   <div className="relative mb-5 overflow-hidden rounded-lg">
                     <img
                       className="object-cover w-full h-[250px] transition duration-500  group-hover:origin-center hover:scale-105"
-                      src="https://assets-prd.ignimgs.com/2022/07/21/porco-rosso-1658447664115.jpg"
+                      src={pic12}
                       alt="Porco Rosso"
+                      loading="lazy"
                     />
                   </div>
                 </a>
