@@ -1,43 +1,23 @@
-import { useState, useEffect } from "react";
-import YouTube from "react-youtube";
+import { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import axios from "axios";
+import trailers from "../data/trailers.json";
 
-const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const PLAYLIST_ID = "PLrMoWLZPWpBU8qR-2hp90obIEEAelORR1";
 
 export default function Trailers() {
-  const [trailers, setTrailers] = useState([]);
-  const [currentTrailer, setCurrentTrailer] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [playing, setPlaying] = useState(false);
 
-  useEffect(() => {
-    const fetchTrailers = async () => {
-      try {
-        const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId=${PLAYLIST_ID}&key=${API_KEY}`
-        );
-        const trailerData = response.data.items.map((item) => ({
-          id: item.snippet.resourceId.videoId,
-          thumbnail:
-            item.snippet.thumbnails.maxres?.url ||
-            item.snippet.thumbnails.high.url,
-        }));
-        setTrailers(trailerData);
-      } catch (error) {
-        console.error("Error fetching trailers", error);
-      }
-    };
+  if (trailers.length === 0) {
+    return null;
+  }
 
-    fetchTrailers();
-  }, []);
+  const active = trailers[current];
 
-  const opts = {
-    height: "100%",
-    width: "100%",
-    playerVars: {
-      autoplay: 0,
-    },
+  const selectTrailer = (index) => {
+    setCurrent(index);
+    setPlaying(true);
   };
 
   return (
@@ -45,47 +25,72 @@ export default function Trailers() {
       className="py-10 lg:py-10 bg-stone-100 sm:px-4 md:px-6"
       id="trailers"
     >
-      <div className="max-w-screen-xl py-4 mx-auto lg:py-6 relative">
+      <div className="relative max-w-screen-xl py-4 mx-auto lg:py-6">
         {/* Section Title */}
-        <div className="text-center flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center mb-8 text-center">
           <span className="text-sm text-gray-600 uppercase">Trailers</span>
-          <h1 className="mt-2 text-3xl font-black font-oregano text-gray-700 md:text-5xl border-b-4 border-yellow-500">
+          <h2 className="mt-2 text-3xl font-black text-gray-700 border-b-4 border-yellow-500 font-oregano md:text-5xl">
             Watch the Magic
-          </h1>
+          </h2>
         </div>
 
-        {/* Big Frame for Currently Played Trailer */}
-        <div className="w-full h-full mb-4 border-8 border-yellow-500 rounded-lg aspect-video">
-          {trailers.length > 0 && (
-            <YouTube
-              videoId={trailers[currentTrailer].id}
-              opts={opts}
-              className="aspect-video h-100 w-full"
+        {/* Main player: loads the YouTube iframe only after a click */}
+        <div className="relative w-full mb-4 overflow-hidden bg-black border-8 border-yellow-500 rounded-lg aspect-video">
+          {playing ? (
+            <iframe
+              key={active.id}
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube-nocookie.com/embed/${active.id}?autoplay=1&rel=0`}
+              title={active.title}
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
             />
+          ) : (
+            <button
+              type="button"
+              onClick={() => setPlaying(true)}
+              aria-label={`Play trailer: ${active.title}`}
+              className="absolute inset-0 w-full h-full group focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-yellow-500"
+            >
+              <img
+                src={active.thumbnail}
+                alt=""
+                loading="lazy"
+                className="object-cover w-full h-full"
+              />
+              <span className="absolute inset-0 flex items-center justify-center transition bg-black/30 group-hover:bg-black/20">
+                <span className="flex items-center justify-center w-20 h-20 text-white bg-yellow-500 rounded-full">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10 ml-1 fill-current"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+              </span>
+            </button>
           )}
         </div>
 
-        {/* Carousel of Smaller Frames with Thumbnails */}
+        {/* Carousel of thumbnails */}
         <AliceCarousel
           items={trailers.map((trailer, index) => (
             <button
               key={trailer.id}
-              className={`aspect-video lg:w-72 lg:h-40 md:w-64 md:h-36 sm:w-52 sm:h-28 cursor-pointer${
-                currentTrailer === index
-                  ? "border-4 border-yellow-500 rounded-lg"
-                  : ""
-              }`}
-              onClick={() => setCurrentTrailer(index)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setCurrentTrailer(index);
-                }
-              }}
+              type="button"
+              onClick={() => selectTrailer(index)}
+              aria-label={`Play trailer: ${trailer.title}`}
+              aria-current={current === index ? "true" : undefined}
+              className="block w-full px-1 rounded-md cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-500"
             >
               <img
                 src={trailer.thumbnail}
-                alt={`Thumbnail for Trailer ${index + 1}`}
-                className="w-full h-full object-fit rounded-md"
+                alt=""
+                loading="lazy"
+                className={`w-full aspect-video object-cover rounded-md ${
+                  current === index ? "ring-4 ring-yellow-500" : ""
+                }`}
               />
             </button>
           ))}
