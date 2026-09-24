@@ -1,224 +1,186 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import newsImage from "../assets/news/new_img.jpg";
-import pic1 from "../assets/news/pic1.jpg";
-import pic2 from "../assets/news/pic2.jpg";
-import pic3 from "../assets/news/pic3.jpg";
-import pic4 from "../assets/news/pic4.jpg";
-import pic5 from "../assets/news/pic5.jpg";
-import pic6 from "../assets/news/pic6.jpeg";
+import { news, LAST_UPDATED } from "../data/news";
 
-const Article = ({ category, title, time, author, authorLink }) => (
-  <div className="flex flex-col space-y-2">
-    <h3 className="flex items-center space-x-2 text-gray-400">
-      <span className="flex-shrink-0 w-2 h-2 uppercase rounded-full bg-red-400"></span>
-      <span className="text-xs font-bold tracking-wide uppercase">
-        {category}
-      </span>
-    </h3>
-    <p className="font-serif">{title}</p>
-    <p className="text-xs text-gray-400">
-      {time} by{" "}
-      <a href={authorLink} className="hover:underline text-red-400">
-        {author}
-      </a>
-    </p>
-  </div>
-);
+const formatDate = (iso) =>
+  new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(iso));
 
-Article.propTypes = {
-  category: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  authorLink: PropTypes.string.isRequired,
-};
+const featured = news.find((item) => item.featured) ?? news[0];
+const others = news.filter((item) => item !== featured);
 
-const articles = {
-  latest: [
-    {
-      category: "ANNOUNCEMENTS",
-      title: "The Critically Acclaimed Hit Series “ARCANE”",
-      time: "10 June",
-      author: "GhibliGaze",
-      authorLink: "#",
-      image: pic4,
-    },
-    {
-      category: "ACQUISITION",
-      title: "Theatrical & Home Entertainment Rights to “DAN DA DAN”",
-      time: "4 Jun",
-      author: "GhibliGaze",
-      authorLink: "#",
-      image: pic5,
-    },
-    {
-      category: "HOME VIDEO",
-      title: "Director Mamoru Oshii’s Seminal Classic “ANGEL’S EGG",
-      time: "29 MAY",
-      author: "GhibliGaze",
-      authorLink: "#",
-      image: pic6,
-    },
-  ],
-  popular: [
-    {
-      category: "ANNOUNCEMENTS",
-      title: "GKIDS Acquires North American Rights to “Mars Express”",
-      time: "26 Oct",
-      author: "GhibliGaze",
-      authorLink: "#",
-      image: pic1,
-    },
-    {
-      category: "THEATRICAL",
-      title: "GKIDS to Release “Blue Giant” In Select Theaters Nationwide",
-      time: "13 Sep",
-      author: "GhibliGaze",
-      authorLink: "#",
-      image: pic2,
-    },
-    {
-      category: "HOME VIDEO",
-      title: "GKIDS To Release EVANGELION:3.0+1.11 THRICE UPON A TIME",
-      time: "31 July",
-      author: "GhibliGaze",
-      authorLink: "#",
-      image: pic3,
-    },
-  ],
-};
+const focusLight =
+  "rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e6a3a] focus-visible:ring-offset-2";
+const focusDark =
+  "rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900";
 
 export default function News() {
-  const [activeTab, setActiveTab] = useState("latest");
+  if (!featured) {
+    return null;
+  }
 
   return (
-    <section className="py-10 lg:py-10 bg-stone-100" id="news">
-      <div className="max-w-screen-xl py-4 mx-auto lg:py-6 md:px-6">
-        {/* Section Title */}
-        <div className="text-center flex flex-col items-center mb-8">
-          <span className="text-sm text-gray-600 uppercase">News</span>
-          <h1 className="mt-2 text-3xl font-black font-oregano text-gray-700 md:text-5xl border-b-4 border-red-500">
+    <section
+      className="py-16 bg-stone-100 lg:py-24"
+      id="news"
+      aria-labelledby="news-title"
+    >
+      <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+        {/* Section title */}
+        <div className="flex flex-col items-center mb-10 text-center">
+          <p className="text-sm tracking-wide text-gray-600 uppercase">News</p>
+          <h2
+            id="news-title"
+            className="mt-2 text-3xl font-black text-gray-700 border-b-4 border-red-500 font-oregano md:text-5xl"
+          >
             What’s New
-          </h1>
+          </h2>
         </div>
-        <div className="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
-          <div className="flex flex-col justify-between col-span-12 py-2 px-4 space-y-8 md:space-y-16 md:col-span-3">
-            {/* Exclusive News */}
-            <div className="flex flex-col space-y-8 md:space-y-12">
-              <Article
-                category="BEHIND THE SCENES"
-                title="The Bright Future of Studio Ghibli: A New Beginning Under Nippon TV"
-                time="2 months ago"
-                author="GhibliGaze"
-                authorLink="#"
+
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+          {/* Featured story */}
+          <article className="relative flex flex-col justify-end overflow-hidden text-gray-100 bg-gray-900 shadow-lg rounded-xl min-h-[24rem] lg:col-span-7">
+            {featured.image && (
+              <img
+                src={featured.image}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 object-cover w-full h-full"
               />
-              <Article
-                category="MOVIES"
-                title="A New Venture Beyond “The Boy and the Heron”"
-                time="3 months ago"
-                author="GhibliGaze"
-                authorLink="#"
-              />
-              <Article
-                category="COOL GHIBLI STUFF"
-                title="Don’t Miss: Studio Ghibli x UNIQLO’s New Must-Have Collab!"
-                time="3 months ago"
-                author="GhibliGaze"
-                authorLink="#"
-              />
-            </div>
-            {/* See more exclusives */}
-            <div className="flex flex-col w-full space-y-2">
-              <div className="flex w-full h-1 bg-opacity-10 bg-red-400">
-                <div className="w-1/2 h-full bg-red-400"></div>
-              </div>
-              <a
-                rel="noopener noreferrer"
-                href="https://gkids.com/news"
-                className="flex items-center justify-between w-full"
-              >
-                <span className="text-xs font-bold tracking-wide uppercase">
-                  See more exclusives
-                </span>
-                <IoIosArrowRoundForward className="text-red-400" />
-              </a>
-            </div>
-          </div>
-          {/* Featured Article */}
-          <div className="relative flex col-span-12 bg-cover bg-no-repeat bg-gray-500 xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96 m-2">
-            <img
-              src={newsImage}
-              alt="Spirited Away Live"
-              className="w-full h-full object-cover"
-              loading="lazy"
+            )}
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/20"
+              aria-hidden="true"
             />
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-end p-6 text-center sm:p-8 group via-transparent flex-grow-1 bg-gradient-to-b from-gray-900 to-gray-900">
-              <span className="absolute px-1 pb-2 text-xs font-bold uppercase border-b-2 left-6 top-6 border-red-400 text-gray-100">
-                Tokyo, Japan
-              </span>
-              <span className="flex items-center mb-4 space-x-2 text-red-400">
-                <span className="relative flex-shrink-0 w-2 h-2 rounded-full bg-red-400">
-                  <span className="absolute flex-shrink-0 w-3 h-3 rounded-full -left-1 -top-1 animate-ping bg-red-400"></span>
+
+            <div className="relative p-6 sm:p-8">
+              <p className="flex items-center gap-2 text-xs font-bold tracking-wide text-red-300 uppercase">
+                <span className="relative flex w-2 h-2" aria-hidden="true">
+                  <span className="absolute inline-flex w-full h-full bg-red-400 rounded-full opacity-75 motion-safe:animate-ping" />
+                  <span className="relative inline-flex w-2 h-2 bg-red-400 rounded-full" />
                 </span>
-                <span className="text-sm font-bold">Live</span>
-              </span>
-              <h1 className="font-serif text-2xl font-semibold group-hover:underline text-gray-100">
-                Spirited Away: Live on Stage to Arrive on Digital and Blu-Ray™
-              </h1>
-            </div>
-          </div>
-          {/* Latest/Popular Articles (Hidden on Small Screens) */}
-          <div className="hidden py-2 xl:col-span-3 lg:col-span-4 md:hidden lg:block">
-            {/* Article Filters */}
-            <div className="mb-8 space-x-5 border-b-2 border-opacity-10 border-red-400">
-              <button
-                type="button"
-                className={`pb-5 text-xs font-bold tracking-wide uppercase ${
-                  activeTab === "latest"
-                    ? "border-b-2 border-red-400"
-                    : "border-transparent text-gray-400"
-                }`}
-                onClick={() => setActiveTab("latest")}
-              >
-                Latest
-              </button>
-              <button
-                type="button"
-                className={`pb-5 text-xs font-bold tracking-wide uppercase ${
-                  activeTab === "popular"
-                    ? "border-b-2 border-red-400"
-                    : "border-transparent text-gray-400"
-                }`}
-                onClick={() => setActiveTab("popular")}
-              >
-                Popular
-              </button>
-            </div>
-            {/* Article List */}
-            <div className="flex flex-col divide-y divide-gray-700">
-              {articles[activeTab].map((article, index) => (
-                <div key={index} className="flex px-1 py-4">
-                  <img
-                    alt={article.title}
-                    className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500"
-                    src={article.image}
-                    loading="lazy"
+                {featured.category}
+              </p>
+              <h3 className="mt-3 font-serif text-2xl font-semibold sm:text-3xl">
+                {featured.title}
+              </h3>
+              <p className="mt-3 leading-7 text-gray-200">{featured.summary}</p>
+              <p className="mt-4 text-sm text-gray-200">
+                {featured.source}
+                {featured.date && (
+                  <>
+                    {" "}
+                    ·{" "}
+                    <time dateTime={featured.date}>
+                      {formatDate(featured.date)}
+                    </time>
+                  </>
+                )}
+              </p>
+
+              <div className="flex flex-wrap items-center mt-5 gap-x-6 gap-y-3">
+                <a
+                  href={featured.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-1 font-semibold text-white underline underline-offset-4 hover:text-red-200 ${focusDark}`}
+                >
+                  Read on {featured.source}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                  <IoIosArrowRoundForward
+                    className="w-6 h-6"
+                    aria-hidden="true"
                   />
-                  <div className="flex flex-col flex-grow">
-                    <p className="font-serif">{article.title}</p>
-                    <div className="mt-2 text-xs text-gray-400">
-                      <span>{article.time}</span>
-                      <span className="block text-red-400 lg:ml-2 lg:inline hover:underline">
-                        {article.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                </a>
+                {featured.trailerUrl && (
+                  <a
+                    href={featured.trailerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-1 font-semibold text-gray-100 underline underline-offset-4 hover:text-red-200 ${focusDark}`}
+                  >
+                    Watch the trailer
+                    <span className="sr-only"> (opens in a new tab)</span>
+                    <IoIosArrowRoundForward
+                      className="w-6 h-6"
+                      aria-hidden="true"
+                    />
+                  </a>
+                )}
+              </div>
+
+              {featured.imageCredit && (
+                <p className="mt-4 text-xs text-gray-300">
+                  Image: {featured.imageCredit}
+                </p>
+              )}
             </div>
+          </article>
+
+          {/* More stories */}
+          <div className="lg:col-span-5">
+            <h3 className="sr-only">More stories</h3>
+            <ul className="divide-y divide-gray-300">
+              {others.map((item) => (
+                <li key={item.id} className="py-5 first:pt-0">
+                  <article>
+                    <p className="text-xs font-bold tracking-wide text-red-700 uppercase">
+                      {item.category}
+                    </p>
+                    <h4 className="mt-1 font-serif text-lg text-gray-900">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`hover:underline ${focusLight}`}
+                      >
+                        {item.title}
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      </a>
+                    </h4>
+                    <p className="mt-1 text-sm leading-6 text-gray-700">
+                      {item.summary}
+                    </p>
+                    <p className="mt-2 text-sm text-gray-600">
+                      {item.source}
+                      {item.date && (
+                        <>
+                          {" "}
+                          ·{" "}
+                          <time dateTime={item.date}>
+                            {formatDate(item.date)}
+                          </time>
+                        </>
+                      )}
+                    </p>
+                  </article>
+                </li>
+              ))}
+            </ul>
           </div>
+        </div>
+
+        {/* Footer note */}
+        <div className="flex flex-col items-start justify-between gap-3 pt-6 mt-10 border-t border-gray-300 sm:flex-row sm:items-center">
+          <p className="text-sm text-gray-600">
+            Last updated{" "}
+            <time dateTime={LAST_UPDATED}>{formatDate(LAST_UPDATED)}</time>.
+            Headlines link to their original sources.
+          </p>
+          <a
+            href="https://gkids.com/news"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-1 text-sm font-bold tracking-wide text-gray-800 uppercase hover:underline ${focusLight}`}
+          >
+            More news at GKIDS
+            <span className="sr-only"> (opens in a new tab)</span>
+            <IoIosArrowRoundForward className="w-6 h-6" aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>
