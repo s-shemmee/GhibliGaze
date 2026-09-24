@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery";
 import News from "./components/News";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import AudioToggle from "./components/AudioToggle";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <News />
       <Newsletter />
       <Footer />
+      <AudioToggle />
     </div>
   );
 }
